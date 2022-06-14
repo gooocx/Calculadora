@@ -45,9 +45,9 @@ public class Calculadora extends javax.swing.JFrame {
         btnDos = new javax.swing.JButton();
         btnTres = new javax.swing.JButton();
         btnMas = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
+        bntCero = new javax.swing.JButton();
+        btnTripleCero = new javax.swing.JButton();
+        btnPunto = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -73,7 +73,7 @@ public class Calculadora extends javax.swing.JFrame {
         btnCiete.setText("7");
         btnCiete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCieteActionPerformed(evt);
+                btnSieteActionPerformed(evt);
             }
         });
 
@@ -139,11 +139,26 @@ public class Calculadora extends javax.swing.JFrame {
 
         btnMas.setText("+");
 
-        jButton17.setText("0");
+        bntCero.setText("0");
+        bntCero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntCeroActionPerformed(evt);
+            }
+        });
 
-        jButton18.setText("000");
+        btnTripleCero.setText("000");
+        btnTripleCero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTripleCeroActionPerformed(evt);
+            }
+        });
 
-        jButton19.setText(".");
+        btnPunto.setText(".");
+        btnPunto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPuntoActionPerformed(evt);
+            }
+        });
 
         jButton20.setText("=");
 
@@ -159,9 +174,9 @@ public class Calculadora extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(bntCero, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(btnTripleCero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                     .addComponent(btnUno, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -169,7 +184,7 @@ public class Calculadora extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(btnTres, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(btnPunto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -206,11 +221,12 @@ public class Calculadora extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(PanelText, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDividir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCE, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnC, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnDividir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnC, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCiete, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -231,9 +247,9 @@ public class Calculadora extends javax.swing.JFrame {
                     .addComponent(btnMas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bntCero, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnTripleCero, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPunto, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -262,63 +278,72 @@ public class Calculadora extends javax.swing.JFrame {
 
     }//GEN-LAST:event_PanelTextActionPerformed
 
+    private void btnPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuntoActionPerformed
+        printNumber (".");
+    }//GEN-LAST:event_btnPuntoActionPerformed
+
+    private void btnTripleCeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTripleCeroActionPerformed
+        printNumber ("000");       
+    }//GEN-LAST:event_btnTripleCeroActionPerformed
+
+    private void bntCeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCeroActionPerformed
+        printNumber ("0");        
+    }//GEN-LAST:event_bntCeroActionPerformed
+
     private void btnUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUnoActionPerformed
-        String valorPantalla = this.PanelText.getText();
-        if (valorPantalla.equals("0")){
-            valorPantalla = "1";      
-        } else {        
-        valorPantalla += "1";
-        }        
-        this.PanelText.setText(valorPantalla);
+        printNumber ("1");
     }//GEN-LAST:event_btnUnoActionPerformed
 
     private void btnDosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDosActionPerformed
-        String valorPantalla = this.PanelText.getText();
-        valorPantalla += "2";
-        this.PanelText.setText(valorPantalla);
+        printNumber ("2");
     }//GEN-LAST:event_btnDosActionPerformed
 
     private void btnTresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTresActionPerformed
-        String valorPantalla = this.PanelText.getText();
-        valorPantalla += "3";
-        this.PanelText.setText(valorPantalla);       
+        printNumber ("3");
     }//GEN-LAST:event_btnTresActionPerformed
 
     private void btnCuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCuatroActionPerformed
-        String valorPantalla = this.PanelText.getText();
-        valorPantalla += "4";
-        this.PanelText.setText(valorPantalla);        
+        printNumber ("4");
     }//GEN-LAST:event_btnCuatroActionPerformed
 
     private void btnCincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCincoActionPerformed
-        String valorPantalla = this.PanelText.getText();
-        valorPantalla += "5";
-        this.PanelText.setText(valorPantalla);        
+        printNumber ("5");
     }//GEN-LAST:event_btnCincoActionPerformed
 
     private void btnSeisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeisActionPerformed
-        String valorPantalla = this.PanelText.getText();
-        valorPantalla += "6";
-        this.PanelText.setText(valorPantalla);       
+        printNumber ("6");
     }//GEN-LAST:event_btnSeisActionPerformed
 
-    private void btnCieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCieteActionPerformed
-        String valorPantalla = this.PanelText.getText();
-        valorPantalla += "7";
-        this.PanelText.setText(valorPantalla);       
-    }//GEN-LAST:event_btnCieteActionPerformed
+    private void btnSieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSieteActionPerformed
+        printNumber ("7");
+    }//GEN-LAST:event_btnSieteActionPerformed
 
     private void btnOchoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOchoActionPerformed
-        String valorPantalla = this.PanelText.getText();
-        valorPantalla += "8";
-        this.PanelText.setText(valorPantalla);       
+        printNumber ("8");
     }//GEN-LAST:event_btnOchoActionPerformed
 
     private void btnNueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNueveActionPerformed
-        String valorPantalla = this.PanelText.getText();
-        valorPantalla += "9";
-        this.PanelText.setText(valorPantalla);        
+        printNumber ("9");
     }//GEN-LAST:event_btnNueveActionPerformed
+    
+    private void printNumber (String buttonText) {
+        String pantalla = this.PanelText.getText();
+        if(pantalla.length() < 8){
+            if(buttonText.equals(".")){
+                if(!pantalla.contains(".")){
+                    pantalla += ".";
+                }
+            } else {
+                if (pantalla.equals("0")){
+                    pantalla = buttonText;
+                } else {
+                    pantalla += buttonText;
+                }
+            }
+            this.PanelText.setText(pantalla);
+        }
+        
+}
 
     /**
      * @param args the command line arguments
@@ -357,6 +382,7 @@ public class Calculadora extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField PanelText;
+    private javax.swing.JButton bntCero;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnC;
     private javax.swing.JButton btnCE;
@@ -369,13 +395,12 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton btnNueve;
     private javax.swing.JButton btnOcho;
     private javax.swing.JButton btnPor;
+    private javax.swing.JButton btnPunto;
     private javax.swing.JButton btnResta;
     private javax.swing.JButton btnSeis;
     private javax.swing.JButton btnTres;
+    private javax.swing.JButton btnTripleCero;
     private javax.swing.JButton btnUno;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton20;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

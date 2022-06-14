@@ -55,9 +55,9 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jButton17" min="-2" pref="73" max="-2" attributes="0"/>
+                                      <Component id="bntCero" min="-2" pref="73" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButton18" max="32767" attributes="0"/>
+                                      <Component id="btnTripleCero" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="btnUno" min="-2" pref="73" max="-2" attributes="0"/>
@@ -68,7 +68,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="btnTres" min="-2" pref="73" max="-2" attributes="0"/>
-                                  <Component id="jButton19" max="32767" attributes="0"/>
+                                  <Component id="btnPunto" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -120,11 +120,13 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="PanelText" min="-2" pref="72" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnBack" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                      <Component id="btnDividir" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btnCE" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
-                      <Component id="btnC" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btnBack" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="btnDividir" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="btnC" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -149,9 +151,9 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton17" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                      <Component id="jButton18" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                      <Component id="jButton19" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="bntCero" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="btnTripleCero" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="btnPunto" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                       <Component id="jButton20" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -197,7 +199,7 @@
             <Property name="text" type="java.lang.String" value="7"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCieteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSieteActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnOcho">
@@ -279,20 +281,29 @@
             <Property name="text" type="java.lang.String" value="+"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton17">
+        <Component class="javax.swing.JButton" name="bntCero">
           <Properties>
             <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bntCeroActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton18">
+        <Component class="javax.swing.JButton" name="btnTripleCero">
           <Properties>
             <Property name="text" type="java.lang.String" value="000"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTripleCeroActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton19">
+        <Component class="javax.swing.JButton" name="btnPunto">
           <Properties>
             <Property name="text" type="java.lang.String" value="."/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPuntoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton20">
           <Properties>
