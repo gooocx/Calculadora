@@ -10,6 +10,10 @@ package main;
  * @author LABMOVIL
  */
 public class Calculadora extends javax.swing.JFrame {
+    
+    public float primernumero;
+    public float segundonumero;
+    public String operador;
 
     /**
      * Creates new form Calculadora
@@ -17,7 +21,7 @@ public class Calculadora extends javax.swing.JFrame {
     public Calculadora() {
         initComponents();
     }
-
+  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -63,12 +67,32 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         btnCE.setText("CE");
+        btnCE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCEActionPerformed(evt);
+            }
+        });
 
         btnC.setText("C");
+        btnC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCActionPerformed(evt);
+            }
+        });
 
         btnBack.setText("⌫");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
 
         btnDividir.setText("÷");
+        btnDividir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDividirActionPerformed(evt);
+            }
+        });
 
         btnCiete.setText("7");
         btnCiete.addActionListener(new java.awt.event.ActionListener() {
@@ -92,6 +116,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         btnPor.setText("X");
+        btnPor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPorActionPerformed(evt);
+            }
+        });
 
         btnCuatro.setText("4");
         btnCuatro.addActionListener(new java.awt.event.ActionListener() {
@@ -115,6 +144,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         btnResta.setText("-");
+        btnResta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRestaActionPerformed(evt);
+            }
+        });
 
         btnUno.setText("1");
         btnUno.addActionListener(new java.awt.event.ActionListener() {
@@ -138,6 +172,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         btnMas.setText("+");
+        btnMas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMasActionPerformed(evt);
+            }
+        });
 
         bntCero.setText("0");
         bntCero.addActionListener(new java.awt.event.ActionListener() {
@@ -161,6 +200,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton20.setText("=");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -325,6 +369,59 @@ public class Calculadora extends javax.swing.JFrame {
     private void btnNueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNueveActionPerformed
         printNumber ("9");
     }//GEN-LAST:event_btnNueveActionPerformed
+
+    private void btnCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCEActionPerformed
+        primernumero = 0;
+        segundonumero = 0;
+                
+        this.PanelText.setText("0");  
+    }//GEN-LAST:event_btnCEActionPerformed
+
+    private void btnMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasActionPerformed
+        this.primernumero = Float.parseFloat(this.PanelText.getText());
+        this.operador = "+";
+        this.PanelText.setText("0");
+               
+    }//GEN-LAST:event_btnMasActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        this.segundonumero = Float.parseFloat(this.PanelText.getText());
+        switch (this.operador){
+            case "+" : this.PanelText.setText(sincero(this.primernumero+this.segundonumero)); break;
+            case "-" : this.PanelText.setText(sincero(this.primernumero-this.segundonumero)); break;
+            case "*" : this.PanelText.setText(sincero(this.primernumero*this.segundonumero)); break;
+            case "/" : this.PanelText.setText(sincero(this.primernumero/this.segundonumero)); break;
+            
+        }   
+                
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void btnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaActionPerformed
+        this.primernumero = Float.parseFloat(this.PanelText.getText());
+        this.operador = "-";
+        this.PanelText.setText("0");
+    }//GEN-LAST:event_btnRestaActionPerformed
+
+    private void btnPorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPorActionPerformed
+        this.primernumero = Float.parseFloat(this.PanelText.getText());
+        this.operador = "*";
+        this.PanelText.setText("0");
+    }//GEN-LAST:event_btnPorActionPerformed
+
+    private void btnDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDividirActionPerformed
+        this.primernumero = Float.parseFloat(this.PanelText.getText());
+        this.operador = "/";
+        this.PanelText.setText("0");      
+    }//GEN-LAST:event_btnDividirActionPerformed
+
+    private void btnCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCActionPerformed
+        PanelText.setText(null);
+        this.PanelText.setText("0");
+    }//GEN-LAST:event_btnCActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBackActionPerformed
     
     private void printNumber (String buttonText) {
         String pantalla = this.PanelText.getText();
@@ -345,6 +442,18 @@ public class Calculadora extends javax.swing.JFrame {
         
 }
 
+    public String sincero(float resultado){
+        String retorno = "";
+        retorno = Float.toString(resultado);
+        
+        if (resultado%1==0){
+            retorno = retorno.substring(0, retorno.length() - 2);
+        }
+        return retorno;
+    }
+    
+    
+    
     /**
      * @param args the command line arguments
      */
