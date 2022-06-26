@@ -56,8 +56,13 @@ public class Calculadora extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora");
+        setBackground(new java.awt.Color(204, 204, 255));
 
+        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
+
+        PanelText.setBackground(new java.awt.Color(102, 0, 255));
         PanelText.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        PanelText.setForeground(new java.awt.Color(255, 255, 255));
         PanelText.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         PanelText.setText("0");
         PanelText.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +71,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnCE.setBackground(new java.awt.Color(102, 51, 255));
+        btnCE.setForeground(new java.awt.Color(255, 255, 255));
         btnCE.setText("CE");
         btnCE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +80,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnC.setBackground(new java.awt.Color(102, 51, 255));
+        btnC.setForeground(new java.awt.Color(255, 255, 255));
         btnC.setText("C");
         btnC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +89,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnBack.setBackground(new java.awt.Color(102, 51, 255));
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("⌫");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +98,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnDividir.setBackground(new java.awt.Color(102, 51, 255));
+        btnDividir.setForeground(new java.awt.Color(255, 255, 255));
         btnDividir.setText("÷");
         btnDividir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +107,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnCiete.setBackground(new java.awt.Color(102, 51, 255));
+        btnCiete.setForeground(new java.awt.Color(255, 255, 255));
         btnCiete.setText("7");
         btnCiete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +116,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnOcho.setBackground(new java.awt.Color(102, 51, 255));
+        btnOcho.setForeground(new java.awt.Color(255, 255, 255));
         btnOcho.setText("8");
         btnOcho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +125,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnNueve.setBackground(new java.awt.Color(102, 51, 255));
+        btnNueve.setForeground(new java.awt.Color(255, 255, 255));
         btnNueve.setText("9");
         btnNueve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +134,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnPor.setBackground(new java.awt.Color(102, 51, 255));
+        btnPor.setForeground(new java.awt.Color(255, 255, 255));
         btnPor.setText("X");
         btnPor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,6 +143,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnCuatro.setBackground(new java.awt.Color(102, 51, 255));
+        btnCuatro.setForeground(new java.awt.Color(255, 255, 255));
         btnCuatro.setText("4");
         btnCuatro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +152,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnCinco.setBackground(new java.awt.Color(102, 51, 255));
+        btnCinco.setForeground(new java.awt.Color(255, 255, 255));
         btnCinco.setText("5");
         btnCinco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,6 +161,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnSeis.setBackground(new java.awt.Color(102, 51, 255));
+        btnSeis.setForeground(new java.awt.Color(255, 255, 255));
         btnSeis.setText("6");
         btnSeis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,6 +170,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnResta.setBackground(new java.awt.Color(102, 51, 255));
+        btnResta.setForeground(new java.awt.Color(255, 255, 255));
         btnResta.setText("-");
         btnResta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,6 +179,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnUno.setBackground(new java.awt.Color(102, 51, 255));
+        btnUno.setForeground(new java.awt.Color(255, 255, 255));
         btnUno.setText("1");
         btnUno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,6 +188,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnDos.setBackground(new java.awt.Color(102, 51, 255));
+        btnDos.setForeground(new java.awt.Color(255, 255, 255));
         btnDos.setText("2");
         btnDos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,6 +197,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnTres.setBackground(new java.awt.Color(102, 51, 255));
+        btnTres.setForeground(new java.awt.Color(255, 255, 255));
         btnTres.setText("3");
         btnTres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,6 +206,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnMas.setBackground(new java.awt.Color(102, 51, 255));
+        btnMas.setForeground(new java.awt.Color(255, 255, 255));
         btnMas.setText("+");
         btnMas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,6 +215,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        bntCero.setBackground(new java.awt.Color(102, 51, 255));
+        bntCero.setForeground(new java.awt.Color(255, 255, 255));
         bntCero.setText("0");
         bntCero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,6 +224,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnTripleCero.setBackground(new java.awt.Color(102, 51, 255));
+        btnTripleCero.setForeground(new java.awt.Color(255, 255, 255));
         btnTripleCero.setText("000");
         btnTripleCero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,6 +233,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        btnPunto.setBackground(new java.awt.Color(102, 51, 255));
+        btnPunto.setForeground(new java.awt.Color(255, 255, 255));
         btnPunto.setText(".");
         btnPunto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,6 +242,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        jButton20.setBackground(new java.awt.Color(102, 51, 255));
+        jButton20.setForeground(new java.awt.Color(255, 255, 255));
         jButton20.setText("=");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -310,9 +355,8 @@ public class Calculadora extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -420,7 +464,18 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        // TODO add your handling code here:
+        int length = PanelText.getText().length();
+        int number = PanelText.getText().length() - 1;
+        String store;
+        
+        if (length > 0)
+        {
+            StringBuilder back = new StringBuilder(PanelText.getText());
+            back.deleteCharAt(number);
+            store = back.toString();
+            PanelText.setText(store);
+            
+        }
     }//GEN-LAST:event_btnBackActionPerformed
     
     private void printNumber (String buttonText) {
